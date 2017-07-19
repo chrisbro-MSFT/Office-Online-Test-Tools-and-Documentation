@@ -24,11 +24,6 @@
           "RepliedTo": true
         },
         {
-          "Name": "John Smith",
-          "Id": "123123123",
-          "Provider": "wopi-contoso",
-        },
-        {
           "Name": "Alice Johnson",
           "Id": "987654321",
           "Provider": "wopi-contoso",

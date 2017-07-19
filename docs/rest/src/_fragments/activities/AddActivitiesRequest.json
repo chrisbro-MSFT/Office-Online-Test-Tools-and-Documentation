@@ -39,13 +39,6 @@
           "Provider": "wopi-contoso",
 
           "InThread": true
-        },
-        {
-          "Name": "John Smith",
-          "Id": "123123123",
-          "Provider": "wopi-contoso",
-
-          "Mentioned": true
         }
       ]
     },
@@ -103,9 +96,7 @@
         {
           "Name": "John Smith",
           "Id": "123123123",
-          "Provider": "wopi-contoso",
-
-          "Mentioned": true
+          "Provider": "wopi-contoso"
         }
       ]
     }
