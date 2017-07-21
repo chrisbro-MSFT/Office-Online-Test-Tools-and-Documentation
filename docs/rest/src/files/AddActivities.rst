@@ -37,28 +37,7 @@ Request
 The request for an |operation| call is JSON (as specified in :rfc:`4627`) containing a single required property:
 
 Activities
-    An **array** of activity objects, defined below.
-
-..  include:: /_fragments/activities/activity_object.rst
-..  include:: /_fragments/activities/comment_activity.rst
-..  include:: /_fragments/activities/mention_activity.rst
-
-People
-~~~~~~
-
-Activities may refer to people besides the activity's creator (inferred from the access token). These people are represented by a person object.
-This person object may come from the host via SearchPeople, or it may come from the document content such as comment author information.
-In the latter case, we might not have any information but the user's name.  Clients should send as much information as they have.
-
-..  include:: /_fragments/person_object.rst
-
-Sample request
-~~~~~~~~~~~~~~
-
-Here is a sample request consisting of five activities: one simple comment, one comment reply that includes a mention, that comment's mention, a mention from outside a comment, and an activity with a type the host does not support:
-
-..  literalinclude:: /_fragments/activities/AddActivitiesRequest.json
-    :language: JSON
+    An **array** of :ref:`activity objects <activity type>`.
 
 Response
 --------
@@ -87,8 +66,19 @@ Status
 Message
     A **string** which the client can log. Optional.
 
-Sample response
-~~~~~~~~~~~~~~~
+Samples
+-------
+
+Sample request 1
+~~~~~~~~~~~~~~~~
+Here is a sample request consisting of five activities: one simple comment, one comment reply that includes a mention, that comment's mention, a mention from outside a comment, and an activity with a type the host does not support:
+
+..  literalinclude:: /_fragments/activities/AddActivitiesRequest.json
+    :language: JSON
+
+
+Sample response 1
+~~~~~~~~~~~~~~~~~
 A sample response to the sample request.  The server failed the "typedstuff" activity because it does not support that type.  The comment activities succeeded.
 
 ..  literalinclude:: /_fragments/activities/AddActivitiesResponse.json

@@ -51,6 +51,4 @@ Response
 --------
 
 People
-    An **array** of person objects.
-
-..  include:: /_fragments/person_object.rst
+    An **array** of :ref:`person object <person type>`.

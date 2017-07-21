@@ -48,7 +48,7 @@ SkipToken
 TypeFilter
     An **array** of strings listing the activity types the client wants.  Optional.
 
-    ..  note:: If hosts do not support filtering, return all activity types.  If the client does not provide a filter, return all activity types.  If some of the requested types are not understood by the host, return the ones that are understood.
+    ..  note:: If the client does not provide a filter, return all activity types.  If some of the types listed in TypeFilter are not understood by the host, return the ones that are understood.
 
 Response
 --------
@@ -56,27 +56,25 @@ Response
 The response for an |operation| call is JSON (as specified in :rfc:`4627`) containing the following properties:
 
 Activities
-    An **array** of objects representing the returned activities, defined below.
+    An **array** of :ref:`activity objects <activity type>` representing the returned activities.
 
 MoreResultsExist
     A **Boolean** indicating whether there are more activities matching the filter than were returned.  The client can send another GetActivities request and include the SkipToken value to see the next batch.
 
 SkipToken
-    A **string** value which clients can send on subsequent GetActivities requests for paging.  Opaque to clients.  Optional.
+    A **string** value which clients can send on subsequent GetActivities requests for paging.  Opaque to clients.
 
 HostActivityViewUrl
     A **string** url to the host's activity view page, if it has one.  Optional.
 
-..  include:: /_fragments/activities/activity_object.rst
-
-For more on the activity types and type-specific data, see :ref:`AddActivities`
+For more on the activity types and type-specific data, see :ref:`activity objects <activity type>`.
 
 Samples
-~~~~~~~~~~~~~~
+-------
 These samples use the activity data sent via the example in :ref:`AddActivities`.
 
 Sample 1
---------
+~~~~~~~~
 This sample request gets the most recent activity on a file.
 
 ..  literalinclude:: /_fragments/activities/GetActivitiesRequest1.json
@@ -85,7 +83,7 @@ This sample request gets the most recent activity on a file.
     :language: JSON
 
 Sample 2
---------
+~~~~~~~~
 This sample request gets up to ten activities of types "comment" and "somethingunknown" and skipping the one returned in Sample 1 by sending Sample 1's SkipToken.
 It returns one activity. The server does not understand the "somethingunknown" type so it ignores it without error.  The client did not ask for mention activities so they skipped. The server did not understand the "bogustype" activity sent in the AddActivities call so it was not saved.
 

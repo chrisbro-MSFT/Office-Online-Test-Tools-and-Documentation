@@ -125,6 +125,16 @@ server intends to integrate with. To learn more about the specific requirements 
 
 ..  toctree::
     :maxdepth: 2
+    :hidden:
+    :glob:
+    :caption: Common Types
+
+    /types/Activities
+    /types/Person
+
+
+..  toctree::
+    :maxdepth: 2
     :glob:
     :hidden:
     :caption: Reference

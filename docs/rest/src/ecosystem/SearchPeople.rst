@@ -61,6 +61,4 @@ PeopleExceedTop
     A **boolean** indicating whether there were more people matching the filter than were returned in the response.
 
 People
-    An **array** of person objects.
-
-..  include:: /_fragments/person_object.rst
+    An **array** of :ref:`person objects <person type>`.

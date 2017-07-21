@@ -1,15 +1,20 @@
+.. _person type:
+
 Person
 ~~~~~~
 
 A person has the following properties.
 
+..  include:: /_fragments/person_provider_id.rst
+
 Name
-    A **string** of the user's friendly name. Required. May be blank.
+    A **string** of the user's friendly name. Optional.
 
 PictureUrl
     A **string** with a url to a profile picture of the user. Optional.
 
-..  include:: /_fragments/person_provider_id.rst
+    ..  note::
+        This property is only expected to be returned by the server.  Clients do not need to populate it when making a request to the server in an operation like :ref:`AddActivities`.
 
 Relationships
 -------------
