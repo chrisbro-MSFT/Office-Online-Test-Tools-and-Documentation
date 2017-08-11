@@ -20,6 +20,9 @@ Relationships
 -------------
 Each person has several optional properties that may be set to describe the person's relationship to the activity.  As usual, all properties default to false and should not be included when they are false.
 
+Mentioned
+    A **boolean** property indicating this person was explicitly mentioned in the activity, for example via a mention activity.
+
 InThread
     A **boolean** property that indicates that this user was part of a threaded discussion but was not explicitly involved in this activity.  For example, a threaded comment discussion.
 
